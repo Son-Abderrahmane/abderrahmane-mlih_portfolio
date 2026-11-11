@@ -401,7 +401,7 @@ export const ArduinoLabSection: React.FC<ArduinoLabProps> = ({ lang }) => {
           {/* Interactive Serial Monitor Console on Right */}
           <div className="lg:col-span-5 bg-stone-900/90 border border-stone-800 rounded-2xl p-6 flex flex-col h-[520px] shadow-2xl">
             {/* Serial Header */}
-            <div className="flex items-center justify-between pb-4 mb-3 border-b border-stone-800">
+            <div className="flex flex-col gap-3 pb-4 mb-3 border-b border-stone-800 sm:flex-row sm:items-center sm:justify-between">
               <div className="flex items-center gap-2">
                 <Terminal className="w-4 h-4 text-emerald-400" />
                 <span className="text-xs font-mono font-bold text-white uppercase tracking-wider">

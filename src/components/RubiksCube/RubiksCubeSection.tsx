@@ -209,11 +209,11 @@ export const RubiksCubeSection: React.FC<RubiksCubeSectionProps> = ({ lang }) =>
             <Cube3D cubeState={cubeState} size={200} interactive={true} />
 
             {/* Recent Moves Feed */}
-            <div className="w-full mt-6 pt-4 border-t border-stone-200 dark:border-stone-800/80 flex items-center justify-between text-xs">
+            <div className="w-full min-w-0 mt-6 pt-4 border-t border-stone-200 dark:border-stone-800/80 flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:justify-between">
               <span className="text-stone-500 font-mono text-[11px]">
                 {lang === 'fr' ? 'Derniers mouvements :' : 'Move Sequence:'}
               </span>
-              <div className="flex items-center gap-1 overflow-x-auto max-w-[280px] custom-scrollbar py-1">
+              <div className="flex w-full items-center gap-1 overflow-x-auto max-w-full custom-scrollbar py-1 sm:w-auto sm:max-w-[280px]">
                 {moveHistory.length === 0 ? (
                   <span className="text-stone-400 italic text-[11px]">{lang === 'fr' ? 'Aucun' : 'None yet'}</span>
                 ) : (
@@ -338,11 +338,11 @@ export const RubiksCubeSection: React.FC<RubiksCubeSectionProps> = ({ lang }) =>
               </div>
 
               {/* Solves History Tape */}
-              <div className="mt-4 pt-3 border-t border-stone-800/80 flex items-center justify-between text-xs">
+              <div className="mt-4 pt-3 border-t border-stone-800/80 flex flex-col items-start gap-2 text-xs sm:flex-row sm:items-center sm:justify-between">
                 <span className="text-stone-500 font-mono text-[11px]">
                   {lang === 'fr' ? 'Session Solves :' : 'Recent Solves:'}
                 </span>
-                <div className="flex items-center gap-2 text-xs font-mono text-stone-400">
+                <div className="flex w-full min-w-0 flex-wrap items-center gap-2 text-xs font-mono text-stone-400 sm:w-auto sm:flex-nowrap">
                   {solvesList.slice(0, 5).map((s, idx) => (
                     <span key={idx} className="bg-stone-900 px-2 py-0.5 rounded border border-stone-800 text-[11px]">
                       {s.toFixed(2)}s
