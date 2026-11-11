@@ -56,7 +56,7 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ lang }) 
                 </div>
 
                 {/* Content Box */}
-                <div className="ml-10 md:ml-0 md:w-1/2 md:px-8 w-full">
+                <div className="ml-10 w-[calc(100%_-_2.5rem)] md:ml-0 md:w-1/2 md:px-8">
                   <div className="bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 hover:border-amber-400 dark:hover:border-stone-700 rounded-2xl p-6 sm:p-7 shadow-sm transition-all">
                     {/* Role & Company Header */}
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2">

@@ -100,18 +100,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
             className="lg:col-span-5 space-y-4"
           >
             {/* Email Card */}
-            <div className="p-6 bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-2xl flex items-center justify-between shadow-sm">
-              <div className="flex items-center gap-4">
+            <div className="p-4 sm:p-6 bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-2xl flex items-center justify-between gap-3 shadow-sm">
+              <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
                 <div className="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-500/10 border border-amber-200 dark:border-amber-500/20 flex items-center justify-center text-amber-600 dark:text-amber-400">
                   <Mail className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-xs font-mono text-stone-500 dark:text-stone-400 uppercase tracking-wider block">
                     Email
                   </span>
                   <a
                     href={`mailto:${PERSONAL_INFO.email}`}
-                    className="text-sm font-semibold text-stone-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+                    className="break-all text-sm font-semibold text-stone-900 dark:text-white hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                   >
                     {PERSONAL_INFO.email}
                   </a>
@@ -121,7 +121,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
               <button
                 onClick={() => handleCopy(PERSONAL_INFO.email, 'email')}
                 type="button"
-                className="p-2 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white rounded-lg bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors cursor-pointer"
+                className="shrink-0 p-2 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white rounded-lg bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors cursor-pointer"
                 title="Copy Email"
               >
                 {copiedType === 'email' ? (
@@ -133,12 +133,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
             </div>
 
             {/* Phone Card */}
-            <div className="p-6 bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-2xl flex items-center justify-between shadow-sm">
-              <div className="flex items-center gap-4">
+            <div className="p-4 sm:p-6 bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-2xl flex items-center justify-between gap-3 shadow-sm">
+              <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
                 <div className="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 flex items-center justify-center text-emerald-600 dark:text-emerald-400">
                   <Phone className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-xs font-mono text-stone-500 dark:text-stone-400 uppercase tracking-wider block">
                     {lang === 'fr' ? 'Téléphone' : 'Phone'}
                   </span>
@@ -154,7 +154,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
               <button
                 onClick={() => handleCopy(PERSONAL_INFO.phone, 'phone')}
                 type="button"
-                className="p-2 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white rounded-lg bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors cursor-pointer"
+                className="shrink-0 p-2 text-stone-500 dark:text-stone-400 hover:text-stone-900 dark:hover:text-white rounded-lg bg-stone-100 dark:bg-stone-800 hover:bg-stone-200 dark:hover:bg-stone-700 transition-colors cursor-pointer"
                 title="Copy Phone"
               >
                 {copiedType === 'phone' ? (
@@ -166,12 +166,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ lang }) => {
             </div>
 
             {/* Location & Timezone Card */}
-            <div className="p-6 bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-2xl flex items-center justify-between shadow-sm">
-              <div className="flex items-center gap-4">
+            <div className="p-4 sm:p-6 bg-white dark:bg-stone-900/60 border border-stone-200 dark:border-stone-800 rounded-2xl flex flex-wrap items-center justify-between gap-3 shadow-sm">
+              <div className="flex min-w-0 flex-1 items-center gap-3 sm:gap-4">
                 <div className="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-500/10 border border-sky-200 dark:border-sky-500/20 flex items-center justify-center text-sky-600 dark:text-sky-400">
                   <MapPin className="w-5 h-5" />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <span className="text-xs font-mono text-stone-500 dark:text-stone-400 uppercase tracking-wider block">
                     {lang === 'fr' ? 'Localisation' : 'Base Location'}
                   </span>

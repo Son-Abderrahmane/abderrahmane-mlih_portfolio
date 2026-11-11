@@ -36,7 +36,7 @@ export const OpeningIntro: React.FC<OpeningIntroProps> = ({ onComplete }) => {
           <div className="absolute inset-0 bg-cube-pattern opacity-10 pointer-events-none" />
 
           {/* Central Logo & Algorithmic Cube Emblem */}
-          <div className="relative flex flex-col items-center text-center max-w-md">
+          <div className="relative flex w-full max-w-md flex-col items-center px-2 text-center">
             {/* Animated Mini 3x3 Grid Matrix */}
             <motion.div
               initial={{ scale: 0.7, rotate: -45, opacity: 0 }}
@@ -75,7 +75,7 @@ export const OpeningIntro: React.FC<OpeningIntroProps> = ({ onComplete }) => {
               initial={{ y: 10, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.45, duration: 0.5 }}
-              className="mt-2 text-xs font-mono text-amber-400 uppercase tracking-widest"
+              className="mt-2 max-w-full break-words text-[10px] sm:text-xs font-mono text-amber-400 uppercase tracking-[0.18em] sm:tracking-widest leading-relaxed"
             >
               Full-Stack Developer · Speedcubing · Arduino IoT
             </motion.p>
